@@ -39,6 +39,8 @@ class BasePage:
     @allure.step('Получить текущий URL')
     def current_url(self):
         return self.driver.current_url
+
+    @allure.step('Форматирование локатора')
     def format_locators(self, locator_1, number):
         method, locator = locator_1
         locator = locator.format(number)

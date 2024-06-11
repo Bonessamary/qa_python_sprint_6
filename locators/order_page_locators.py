@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 
 class OrderPageLocators:
 
+    # Кнопка согласия с куками
+    BUTTON_COOKIE = (By.ID, 'rcc-confirm-button')
+
     # Кнопка "Заказать" вверху
     BUTTON_ORDER_HEAD = (By.XPATH, ".//div[contains(@class, 'Header_Nav')]/button[text()='Заказать']")
 
@@ -10,8 +13,6 @@ class OrderPageLocators:
     BUTTON_ORDER_CONTENT = By.XPATH, ".//div[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']"
 
     # Раздел "Для кого самокат"
-    # Заголовок раздела "Для кого самокат"
-    TITLE_WHOSE_SCOOTER = By.XPATH, ".//div[text()='Для кого самокат']"
 
     # Поле "Имя"
     NAME = By.XPATH, ".//input[@placeholder='* Имя']"
@@ -37,8 +38,6 @@ class OrderPageLocators:
     BUTTON_NEXT = By.XPATH, ".//button[text()='Далее']"
 
     # Раздел "Про аренду"
-    # Заголовок раздела "Про аренду"
-    TITLE_ABOUT_RENT = By.XPATH, ".//div[text()='Про аренду']"
 
     # Поле "Когда привезти самокат"
     DATE = By.CSS_SELECTOR, "[placeholder='* Когда привезти самокат']"
@@ -63,9 +62,6 @@ class OrderPageLocators:
 
     # Поле "Комментарий для курьера"
     COMMENT = By.XPATH, ".//input[@placeholder='Комментарий для курьера']"
-
-    # Кнопка "Назад" на странице заказа
-    BUTTON_BACK = By.XPATH, ".//button[text()='Назад']"
 
     # Кнопка "Заказать" на странице заказа
     BUTTON_ORDER = By.XPATH, ".//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']"
